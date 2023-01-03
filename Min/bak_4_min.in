@@ -1,0 +1,9 @@
+(d) Minimization Bak
+
+&cntrl
+   imin=1, 
+   maxcyc=10000, ncyc=10000, ntmin=1, 
+   cut=9., 
+   ntb=1,
+   ntr=0,  
+&end

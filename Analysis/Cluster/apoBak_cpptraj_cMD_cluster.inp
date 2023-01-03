@@ -1,0 +1,23 @@
+/home/prog/amber18/bin/cpptraj ./NoWat.bak.top > cMD_clus_ave.res << EOF
+
+  trajin   ./bak_NoWat_dyn_Sup.nc        1 last 1
+
+
+cluster hieragglo averagelinkage clusters 10       \
+        rms :68-83,93-104,107-117@CA             \
+        sieve 3                                    \
+        summary       cluster_ave.res              \
+        info          info_ave.res                 \
+        cpopvtime     popul_ave.res                \
+        clusterout    cluster_ave.pdb              \
+        repout        representative_ave       \
+        repfmt        pdb                          \
+        singlerepout  representative_all_ave.rst   \
+        singlerepfmt  rst                          \
+        out           resul_ave.res
+
+
+go
+
+EOF
+

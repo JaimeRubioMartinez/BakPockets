@@ -1,0 +1,20 @@
+(a) Preparation GaMD Bak
+
+ &cntrl
+     imin=0, irest=0, ntx=1,
+     ntc=2, ntf=2, dt=0.002, 
+     cut = 11.0, iwrap = 1,
+     fswitch = 8.0,
+     ntb=1, ntp=0,
+     nstlim=5000000,
+     ntpr=10000,
+     temp0 =300.0,
+     ntt=3, gamma_ln=3.0, ig=-1,
+     ntwv=0, ntwe=0, ntwx=5000,ntwr=100000,  
+     ntr=0,ibelly=0,
+     igamd = 3, iE = 1, irest_gamd = 0,
+     ntcmdprep =  500000, ntcmd = 1000000,
+     ntebprep  =  100000, nteb  = 4000000,
+     ntave     =    50000,
+     sigma0P = 3.0, sigma0D = 5.0,
+ &end

@@ -1,0 +1,14 @@
+(c) Production Bak   
+ 
+ &cntrl
+    imin=0, irest=1, ntx=5,
+    ntc=2,ntf=2, dt=0.002,
+    cut = 9.0, iwrap=1,
+    nstlim=150000000,
+    ntpr=100000,
+    ntb=1, ntp=0, 
+    ntt=3, gamma_ln=3.0,ig=-1, 
+    temp0=300.0,
+    ntwv=0, ntwe=0, ntwx=5000,ntwr=10000,
+    ntr=0,         
+ &end

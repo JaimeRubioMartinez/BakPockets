@@ -1,0 +1,11 @@
+(a) Minimization Bak
+
+&cntrl
+   imin=1, 
+   maxcyc=5000,ncyc=1000,
+   cut=9., 
+   ntb=1,
+   ntr=1,  
+   restraintmask=':1-169',
+   restraint_wt=5.0,
+&end

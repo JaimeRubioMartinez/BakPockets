@@ -1,0 +1,11 @@
+source /home/prog/amber18/amber.sh
+
+/home/prog/amber18/bin/cpptraj ./NoWat.bak.top     > cpptraj_rmsf.out << EOF
+
+trajin  ./bak_all_NoWat_dyn.nc   1 last 1                   
+
+atomicfluct out bak_rmsf.dat   :1-169@CA byres
+
+go
+
+EOF

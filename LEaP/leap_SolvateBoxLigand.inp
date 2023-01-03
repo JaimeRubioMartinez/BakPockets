@@ -1,0 +1,20 @@
+source leaprc.protein.ff14SB 
+source leaprc.water.tip3p
+
+set default pbradii mbondi2
+loadAmberParams frcmod.ionsjc_tip3p
+
+protein = loadpdb bak.pdb 
+
+solvatebox  protein TIP3PBOX  16.0 1.00 
+
+addions protein Na+ 0
+addions protein Cl- 0
+
+check protein
+
+saveamberparm protein  bak.top  bak.rst
+
+savepdb  protein  bak_leap.pdb
+
+quit

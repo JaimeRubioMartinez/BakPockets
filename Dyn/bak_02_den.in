@@ -1,0 +1,16 @@
+(b) Density Equilibration   
+ 
+ &cntrl
+    imin=0, irest=1, ntx=5,
+    ntc=2,ntf=2, dt=0.002, 
+    nstlim=100000,
+    cut = 9.0,
+    ntb=2, ntp=1, 
+    ntpr=1000,
+    ntt=1, taup = 1.0,          
+    temp0=300.0, pres0 = 1.0 
+    ntwv=0, ntwe=1000, ntwx=5000,ntwr=10000,
+    ntr=1,ibelly=0,
+    restraintmask=':1-169@C,N,CA',
+    restraint_wt=1.0,  
+ &end

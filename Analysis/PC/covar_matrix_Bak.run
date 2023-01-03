@@ -1,0 +1,28 @@
+ /home/prog/amber18/bin/cpptraj  > bak_PCA_covar_matrix.out << EOF 
+ 
+parm ./NoWat.bak.top [top1]
+parm ./NoWat.bak_int.top [top2]
+parm ./NoWatNoBim.bak_bim.top [top3]
+                                
+  trajin   ./bak_NoWat_dyn.nc        1 last 1 [top1]
+  trajin   ./bak_NoWat_int_dyn.nc    1 last 1 [top2]
+  trajin   ./bak_NoWat_NoBim_dyn.nc  1 last 1 [top3]
+
+  reference  ./bak_leap.pdb
+
+  rms reference out RMS_bak_PCA.dat  :68-83,93-104,107-117@CA
+
+  createcrd crd1
+
+  run
+                                      
+  crdaction crd1 matrix covar :68-83,93-104,107-117@CA name m_covar
+
+  runanalysis diagmatrix m_covar out bak_COVAR.pev vecs 117 name MyModes
+
+  run
+
+EOF
+
+
+

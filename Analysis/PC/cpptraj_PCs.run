@@ -1,0 +1,19 @@
+ /home/prog/amber18/bin/cpptraj > bak_PCA_cpptraj_PCs.out  << EOF  
+ 
+parm ./NoWat.bak.top [top1]
+parm ./NoWat.bak_int.top [top2]
+parm ./NoWatNoBim.bak_bim.top [top3]
+                                
+  trajin   ./bak_NoWat_dyn.nc        1 last 1 [top1]
+  trajin   ./bak_NoWat_int_dyn.nc    1 last 1 [top2]
+  trajin   ./bak_NoWat_NoBim_dyn.nc  1 last 1 [top3]
+                     
+                                       
+ createcrd crd1                          
+ run                                     
+                                         
+ crdaction crd1 projection Proj_pca12 modes  ./bak_COVAR.pev  out  bak.ppj  beg 1 end 10 :68-83,93-104,107-117@CA
+
+ go                                      
+                                         
+EOF
